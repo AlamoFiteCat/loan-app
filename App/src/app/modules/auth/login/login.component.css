@@ -1,0 +1,12 @@
+.login-card {
+    width: 24rem;
+    margin: 0 auto;
+}
+
+.auth-toolbar {
+    margin-bottom: 40px;
+}
+
+.mat-form-field {
+    width: 100%;
+}

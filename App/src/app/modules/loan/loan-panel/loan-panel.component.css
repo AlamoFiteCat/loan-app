@@ -1,0 +1,15 @@
+.loan-card {
+    width: 15rem;
+}
+
+.loan-container {
+    padding: 4rem;
+}
+
+.btn {
+    margin-bottom: 2rem;
+}
+
+.loan-actions-container {
+    border-top: 1px solid #303030;
+}

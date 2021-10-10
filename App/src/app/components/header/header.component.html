@@ -1,0 +1,14 @@
+<mat-toolbar class="header-toolbar">
+  <div class="container">
+    <button
+      mat-mini-fab
+      class="menu-button"
+      color="primary"
+      (click)="onToggleSidebar()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="header__brand">microCredit</div>
+  </div>
+  <button (click)="onLogoutUser()" *ngIf="currentUser" mat-raised-button color="accent">Logout</button>
+</mat-toolbar>

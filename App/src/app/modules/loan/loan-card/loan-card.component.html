@@ -1,0 +1,36 @@
+<mat-card class="displayed-loan">
+  <mat-card-header>
+    <mat-card-title>{{ displayedLoan?.id }}</mat-card-title>
+    <mat-card-subtitle>{{ displayedLoan?.client }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="displayed-loan__content">
+    <p class="loan-data">
+      Request Date: {{ displayedLoan?.requestDate | date }}
+    </p>
+    <p class="loan-data">
+      Approval Date: {{ displayedLoan?.approvalDate | date }}
+    </p>
+    <p class="loan-data">Status: {{ displayedLoan?.status | titlecase }}</p>
+    <p class="loan-data">
+      Amount: {{ displayedLoan?.amount | currency: "EUR" }}
+    </p>
+    <p class="loan-data">Installments: {{ displayedLoan?.installments }}</p>
+    <p class="loan-data">Interest Rate: {{ displayedLoan?.interestRate }}</p>
+    <p class="loan-data">Principal: {{ displayedLoan?.principalAmount }}</p>
+    <p class="loan-data">Interest: {{ displayedLoan?.interestAmount }}</p>
+  </mat-card-content>
+  <button
+    *ngIf="displayedLoan?.status === loanStatusEnum.NEW"
+    mat-raised-button
+    color="primary"
+  >
+    Send For Approval
+  </button>
+  <button
+    *ngIf="displayedLoan?.status === loanStatusEnum.SENT_FOR_APPROVAL"
+    mat-raised-button
+    color="primary"
+  >
+    Approve
+  </button>
+</mat-card>

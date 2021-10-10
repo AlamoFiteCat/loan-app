@@ -1,0 +1,43 @@
+<form class="loan-form" [formGroup]="newLoanForm" (ngSubmit)="onCreateLoan()">
+  <mat-form-field>
+    <mat-label>Client Name</mat-label>
+    <input
+      type="text"
+      matInput
+      autocomplete="off"
+      placeholder="e.g. Jon Done"
+      formControlName="clientName"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Amount</mat-label>
+    <input
+      type="text"
+      matInput
+      autocomplete="off"
+      placeholder="In EUR"
+      formControlName="requestAmount"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Installments</mat-label>
+    <input
+      type="text"
+      matInput
+      autocomplete="off"
+      placeholder="e.g. 12"
+      formControlName="numberOfInstallments"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Interest Rate</mat-label>
+    <input
+      type="text"
+      matInput
+      autocomplete="off"
+      placeholder="e.g. 5.5"
+      formControlName="interestRate"
+    />
+  </mat-form-field>
+  <button type="submit" mat-raised-button color="primary">Submit</button>
+</form>

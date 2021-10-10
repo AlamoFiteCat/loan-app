@@ -1,0 +1,22 @@
+.header__span {
+    background-color: #7b1fa2;
+    padding: 4px;
+    border-radius: 8px;
+    margin-left: 2px;
+}
+
+.menu-button {
+    margin-right: 1rem;
+}
+
+.header-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

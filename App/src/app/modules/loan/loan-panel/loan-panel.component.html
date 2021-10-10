@@ -1,0 +1,61 @@
+<mat-toolbar class="loan-actions-container">
+  <button mat-raised-button color="primary" (click)="onOpenDialog()">
+    New Loan
+  </button>
+</mat-toolbar>
+<div class="loan-container">
+  <!-- <mat-card
+    *ngFor="let loan of loanList"
+    class="loan-card"
+    (click)="onDisplayLoan(loan)"
+  >
+    <mat-card-header>
+      <mat-card-title>{{ loan.id }}</mat-card-title>
+      <mat-card-subtitle>{{ loan.client }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="loan-data">Amount: {{ loan.amount }}</p>
+      <p class="loan-data">Status: {{ loan.status | titlecase }}</p>
+      <p class="loan-data">Installments: {{ loan.installments }}</p>
+    </mat-card-content>
+  </mat-card> -->
+  <mat-table [dataSource]="dataSource">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element.id }}
+      </mat-cell>
+    </ng-container>
+    <!-- Client Column -->
+    <ng-container matColumnDef="client">
+      <mat-header-cell *matHeaderCellDef>Client</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element.client }}
+      </mat-cell>
+    </ng-container>
+    <!-- Status Column -->
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element.status | titlecase}}
+      </mat-cell>
+    </ng-container>
+    <!-- Amount Column -->
+    <ng-container matColumnDef="amount">
+      <mat-header-cell *matHeaderCellDef>Amount</mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element.amount | currency:"EUR" }}
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns" (click)="onDisplayLoan(row)"></mat-row>
+  </mat-table>
+
+  <hr />
+  <app-loan-card
+    [displayedLoan]="loanToDisplay"
+    *ngIf="loanToDisplay"
+  ></app-loan-card>
+</div>

@@ -1,0 +1,28 @@
+{
+  "loans": [
+    {
+      "id": "AGR-0001/21",
+      "client": "Dim Wittman",
+      "approvalDate": "2021-09-30",
+      "requestDate": "2021-09-30",
+      "status": "new",
+      "amount": 8500,
+      "installments": 24,
+      "interestRate": 0.55,
+      "principalAmount": 177.08,
+      "interestAmount": 38.96
+    },
+    {
+      "id": "AGR-0002/21",
+      "client": "Jon Doe",
+      "requestDate": "2021-10-10T10:44:43.573Z",
+      "approvalDate": "",
+      "status": "new",
+      "amount": "2000",
+      "installments": "24",
+      "interestRate": "8.5",
+      "principalAmount": "83.33",
+      "interestAmount": "7.08"
+    }
+  ]
+}

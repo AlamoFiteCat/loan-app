@@ -1,0 +1,10 @@
+.sidenav {
+  min-height: 100vh;
+  border-right: 1px solid #dedede;
+}
+
+.mat-list-item:hover,
+.active {
+  background-color: #7b1fa2;
+  cursor: pointer;
+}
